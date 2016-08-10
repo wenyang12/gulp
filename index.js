@@ -1,16 +1,21 @@
+/**
+ * gulp-ssi, base @tools/ssi
+ * @author luoying
+ */
+
 'use strict';
 
 const path = require('path');
 const through2 = require('through2');
 const ssi = require('@tools/ssi');
 
-module.exports = function(options) {
+module.exports = (options) => {
   let opts = Object.assign({
     root: '',
     filename: ''
   }, options || {});
 
-  return through2.obj(function(file, enc, callback) {
+  return through2.obj((file, enc, callback) => {
     if (file.isNull()) {
       return callback(null, file);
     }
