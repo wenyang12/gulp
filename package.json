@@ -1,6 +1,6 @@
 {
   "name": "@tools/gulp-ssi",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "gulp-ssi",
   "main": "index.js",
   "scripts": {
