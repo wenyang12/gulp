@@ -5,7 +5,6 @@
 
 'use strict';
 
-const path = require('path');
 const through2 = require('through2');
 const ssi = require('@tools/ssi');
 
@@ -20,7 +19,7 @@ module.exports = (options) => {
       return callback(null, file);
     }
 
-    opts.root = path.dirname(file.path);
+    opts.root = file.base;
     opts.filename = file.path;
 
     let html = file.contents.toString();
